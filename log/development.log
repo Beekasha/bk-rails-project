@@ -294,3 +294,41 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.0ms | Allocations: 4445)
 
 
+Started GET "/" for ::1 at 2020-04-19 19:13:37 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 334)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 131)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 5979)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-04-19 19:13:40 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 546)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1923)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 7581)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-04-19 19:13:47 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"akhdv9K3l8Yx10MYQVWjtmZeAqwarDwuKA0iyJQDgVqxl5S4Pv++7tlhPWkyLnnEVnyetdwjCM5n/t4BaCjtnQ==", "user"=>{"email"=>"dean@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "dean@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 141ms (ActiveRecord: 0.2ms | Allocations: 3699)
+
+
+Started GET "/" for ::1 at 2020-04-19 19:13:47 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:3
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 5244)
+
+
